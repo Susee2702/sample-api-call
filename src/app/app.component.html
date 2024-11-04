@@ -1,0 +1,25 @@
+<div class="product-table-container">
+<h2>Premium Product List</h2>
+<table class="product-table">
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Stock</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of apiData">
+      <td class="image-cell">
+        <img [src]="product.thumbnail" alt="{{ product.title }}" />
+      </td>
+      <td>{{ product.title }}</td>
+      <td>{{ product.description }}</td>
+      <td class="price">${{ product.price }}</td>
+      <td class="stock">{{ product.stock }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
